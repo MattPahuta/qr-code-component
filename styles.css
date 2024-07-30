@@ -11,17 +11,22 @@ Date: July 2024
   /* Fonts */
   --ff-primary: "Outfit", sans-serif;
   /* Font Sizes */
-
+  --fs-card-heading: 1.375rem;
+  --fs-card-text: 0.938rem;
+  /* Spacing values */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-500: 2.5rem; /* 40px */
   /* Colors */
   --clr-white: hsl(0, 0%, 100%);
-  --clr-neutral-300: hsl(212, 45%, 89%);
-  --clr-neutral-500: hsl(216, 15%, 48%);
-  --clr-neutral-900: hsl(218, 44%, 22%);
-  /* Border radius */
-  --br-soft: 1rem;
-  --br-round: 50%;
-  
+  --clr-slate-300: hsl(212, 45%, 89%);
+  --clr-slate-500: hsl(216,15%,48%);
+  --clr-slate-900: hsl(218, 44%, 22%);
+  /* Drop shadow */
 
+  /* Border radius */
+  --br-extra-soft: 0.625rem; /* 10px */
+  --br-soft: 1.25rem; /* 20px */
 }
 
 /* RESET */
@@ -66,12 +71,43 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: var(--ff-primary);
+  font-weight: 400;
   line-height: 1.5;  
-
+  background: var(--clr-slate-300);
 }
 
-.wrapper {
-  margin-inline: auto;
-  width: calc(100% - 2rem);
+.card {
+  margin: var(--spacing-200);
+  padding: var(--spacing-200);
+  max-width: 20rem; 
+  text-align: center;
+  background: var(--clr-white);
+  border-radius: var(--br-soft);
+}
+
+.card__img {
+  margin-bottom: var(--spacing-300);
+  border-radius: var(--br-extra-soft);
+}
+
+.card__title,
+.card__description {
+  padding-inline: var(--spacing-200);
+}
+
+.card__title {
+  margin-bottom: var(--spacing-200);
+  font-size: var(--fs-card-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--clr-slate-900);
+}
+
+.card__description {
+  margin-bottom: var(--spacing-300);
+  font-size: var(--fs-card-text);
+  color: var(--clr-slate-500);
 }
