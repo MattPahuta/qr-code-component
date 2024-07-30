@@ -1,0 +1,77 @@
+/*
+Author: Matt Pahuta
+https://www.mattpahuta.com
+Date: July 2024
+*/
+
+/* **************** */
+/* Custom Variables */
+/* **************** */
+:root {
+  /* Fonts */
+  --ff-primary: "Outfit", sans-serif;
+  /* Font Sizes */
+
+  /* Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(212, 45%, 89%);
+  --clr-neutral-500: hsl(216, 15%, 48%);
+  --clr-neutral-900: hsl(218, 44%, 22%);
+  /* Border radius */
+  --br-soft: 1rem;
+  --br-round: 50%;
+  
+
+}
+
+/* RESET */
+/* Josh Comeau custom css reset */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* BASE STYLES */
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-primary);
+  line-height: 1.5;  
+
+}
+
+.wrapper {
+  margin-inline: auto;
+  width: calc(100% - 2rem);
+}
