@@ -4,15 +4,13 @@ https://www.mattpahuta.com
 Date: July 2024
 */
 
-/* **************** */
 /* Custom Variables */
-/* **************** */
 :root {
   /* Fonts */
   --ff-primary: "Outfit", sans-serif;
   /* Font Sizes */
-  --fs-card-heading: 1.375rem;
-  --fs-card-text: 0.938rem;
+  --fs-card-text: 0.938rem; /* 15px */
+  --fs-card-heading: 1.375rem; /* 22px */
   /* Spacing values */
   --spacing-200: 1rem; /* 16px */
   --spacing-300: 1.5rem; /* 24px */
@@ -22,8 +20,8 @@ Date: July 2024
   --clr-slate-300: hsl(212, 45%, 89%);
   --clr-slate-500: hsl(216,15%,48%);
   --clr-slate-900: hsl(218, 44%, 22%);
-  /* Drop shadow */
-
+  /* Box shadow */
+  --bs-primary: 0 10px 20px rgba(31, 50, 81, 0.25);
   /* Border radius */
   --br-extra-soft: 0.625rem; /* 10px */
   --br-soft: 1.25rem; /* 20px */
@@ -86,6 +84,7 @@ body {
   text-align: center;
   background: var(--clr-white);
   border-radius: var(--br-soft);
+  box-shadow: var(--bs-primary);
 }
 
 .card__img {
